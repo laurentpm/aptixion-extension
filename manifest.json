@@ -1,34 +1,35 @@
 {
-    "manifest_version": 2,
-    "name": "Aptixion Extension",
-    "version": "1.0",
-    "description": "Gets page-level LinkedIn data for your app",
-    "permissions": [
+  "manifest_version": 3,
+  "name": "Aptixion Extension V2",
+  "version": "2.0.0",
+  "description": "Gets page-level LinkedIn data for your app",
+  "permissions": [
       "storage",
-      "activeTab",
+      "activeTab"
+  ],
+  "host_permissions": [
       "https://www.linkedin.com/*"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
-    "icons": {
-        "128": "icon.png"
-      },
-    "content_scripts": [
-      {
-        "matches": ["https://www.linkedin.com/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "externally_connectable": {
-        "matches": [
-          "http://localhost:3000/*",
-          "http://127.0.0.1:3000/*"
-        ]
-      },
-    "browser_action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "icons": {
+      "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"]
     }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:3000/*",
+      "https://aptixion.netlify.app/*"
+    ]
+  },
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   }
+}
