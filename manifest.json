@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Aptixion Extension V2",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Gets page-level LinkedIn data for your app",
   "permissions": [
       "storage",
