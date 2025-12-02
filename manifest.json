@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Aptixion Extension V2",
-  "version": "2.0.1",
+  "name": "Humen Labs Extension",
+  "version": "2.0.2",
   "description": "Gets page-level LinkedIn data for your app",
   "permissions": [
       "storage",
@@ -25,7 +25,8 @@
   "externally_connectable": {
     "matches": [
       "http://localhost:3000/*",
-      "https://aptixion.netlify.app/*"
+      "https://aptixion.netlify.app/*",
+      "https://app.tryhumen.com/*"
     ]
   },
   "action": {
